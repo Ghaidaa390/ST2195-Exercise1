@@ -5,12 +5,11 @@ output:
     df_print: paged
 ---
 
-### Student Name:
+### Student Name: Ghiadaa Jaber
 
-### Student ID:
+### Student ID: STU-00099333
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook for practicing basic R data types, which is part of the ST2195 course at UOL and BIBF.
-Please answer the following questions by writing proper R code, and upload the completed file to a GitHub repository shared with your teacher (Github id heshaaam\@gmail.com).
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook for practicing basic R data types, which is part of the ST2195 course at UOL and BIBF. Please answer the following questions by writing proper R code, and upload the completed file to a GitHub repository shared with your teacher (Github id heshaaam\@gmail.com).
 
 Prior to running the commands in R, try to figure out what you expect the result to be.You should then verify that this will indeed be the qresult by running the command in an R session. In case there is a discrepency between your expectations and the actual output make sure you understand why before you move forward. If you can not figure out how to, or which command to run you can ask your instructor or discuss the issue in class.
 
@@ -34,107 +33,139 @@ rm(list = ls())
 
 ## Basic Data Types in R
 
-1. Create variables var1 and var2 and initialize them with two integers of choice.
-Please place your answer in the available code chunks below the question.
+1.  Create variables var1 and var2 and initialize them with two integers of choice. Please place your answer in the available code chunks below the question.
 
 ```{r}
-
+var1 <- 40L
+var2 <- 2L
 ```
 
-2. Add the two variables and save them as a new variable named var3 and print the result.
+2.  Add the two variables and save them as a new variable named var3 and print the result.
 
 ```{r}
-
+var3 <- var1 + var2
 ```
 
-3. Check the class, mode, and type for var1, var2, var3 and $\pi$ (is found under the variable name pi in R)
+3.  Check the class, mode, and type for var1, var2, var3 and $\pi$ (is found under the variable name pi in R)
 
 ```{r}
-
+class(var1)
+class(var2)
+class(var3)
+mode(var1)
+mode(var2)
+mode(var3)
+class(pi)
+mode(pi)
+typeof(pi)
+typeof(var1)
+typeof(var2)
+typeof(var3)
 ```
 
-4. Create two character variables text1 and text2 containing any text of choice. Check mode, class, and type of the first one.
+4.  Create two character variables text1 and text2 containing any text of choice. Check mode, class, and type of the first one.
 
 ```{r}
-
+text1 <- "Hello"
+text2 <- "Hi"
+typeof("Hello")
+mode("Hello")
+class("Hello")
 ```
 
 Add var1 from above to text1 and report the result.
 
 ```{r}
-
+var1 + text1
 ```
 
-5. Coerce or cast (force data type) var3 to integer, cast an integer variable to double, cast a string to a double.
+5.  Coerce or cast (force data type) var3 to integer, cast an integer variable to double, cast a string to a double.
 
 ```{r}
-
+var3 <- as.integer(var3)
 ```
 
-6. Use the floor and ceiling functions to caclulate the floor and ceiling of $\pi$.
-Check whether the floor of $\pi$ is an integer?
+6.  Use the floor and ceiling functions to calculate the floor and ceiling of $\pi$. Check whether the floor of $\pi$ is an integer?
 
 ```{r}
-
+floor(pi)
+ceiling(pi)
+pii <- floor(pi)
+is.integer(pii)
 ```
 
-7. Convert the ‘3.56437’ string as number.
+7.  Convert the ‘3.56437’ string as number.
 
 ```{r}
-
+as.numeric(3.56437)
+typeof(3.56437)
 ```
 
-8. Infinity (i.e. $\infty$) is written in R as \\inf . Calculate $\infty$ divided by $-\infty$.
+8.  Infinity (i.e. $\infty$) is written in R as \\inf . Calculate $\infty$ divided by $-\infty$.
 
 ```{r}
-
+pos_inf <- Inf
+neg_inf <- -Inf
+pos_inf / neg_inf
 ```
 
-9. Create two freely chosen complex numbers.
+9.  Create two freely chosen complex numbers.
+
 ```{r}
-
+comp1 <- 5+2i
+comp2 <- 7-6i
 ```
 
+-   Check that they are complex indeed.
 
-* Check that they are complex indeed.
 ```{r}
-
+is.complex(comp1)
+is.complex(comp2)
 ```
 
+-   Add, multiply and divide one by another.
 
-* Add, multiply and divide one by another.
 ```{r}
-
+comp1 + comp2
+comp1 * comp2
+comp1 / comp2
 ```
 
+-   Add an integer to their sum.
 
-* Add an integer to their sum.
 ```{r}
-
+comp1 + comp2
+comp1 + comp2 + 10
 ```
 
-10. Multiply a logical TRUE by a logical FALSE. 
+10. Multiply a logical TRUE by a logical FALSE.
 
 Raise the logical TRUE to the 7-th power.
 
 ```{r}
-
+TRUE * FALSE 
+TRUE^7
 ```
 
 11. Create two character variables containing two verses of your favorite song.
 
-* concatenate the two variables,
+-   concatenate the two variables,
 
-* paste the variables with ‘*’ as separator.
+-   paste the variables with ‘\*’ as separator.
 
-* find if ‘and’ occurs in the second line,
+-   find if ‘and’ occurs in the second line,
 
-* substitute a word for another,
+-   substitute a word for another,
 
-* extract substring starting at the 5th character and 5 characters long.
+-   extract substring starting at the 5th character and 5 characters long.
 
 ```{r}
-
+verse1 <- "I cant think of any" 
+verse2 <- "I still cant think of any"
+paste0(verse1, verse2)
+paste(verse1, verse2, sep = "*")
+grepl("and", verse2)
+substr(verse2, 5, 5 + 4)
 ```
 
 Thank you. Please submit the finished notebook to Hesham through GitHub.
